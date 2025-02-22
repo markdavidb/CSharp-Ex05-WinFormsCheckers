@@ -12,8 +12,11 @@ This project includes **player setup, turn-based gameplay, and rule enforcement*
 
 ## 👥 Authors  
 - [**markdavidb**](https://github.com/markdavidb)  
-- [**yarinzaroog**](https://github.com/yarinzaroog)  
-
+- [**yarinzaroog**](https://github.com/yarinzaroog)
+  
+## 👨‍🏫 Lecturer  
+- [**Guy Ronen**](https://guyronen.net/)
+  
 ---
 
 ## 🛠 Technologies  
