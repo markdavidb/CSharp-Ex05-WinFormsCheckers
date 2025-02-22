@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B961AAD2-CF27-475A-96E5-BAC3754A8A85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CheckersWinApp</RootNamespace>
+    <AssemblyName>CheckersWinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckersApplication.cs" />
+    <Compile Include="FadeOutAnimator.cs" />
+    <Compile Include="FormCheckersApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGameSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic\Board.cs" />
+    <Compile Include="Logic\CheckersLogic.cs" />
+    <Compile Include="Logic\eGameStatus.cs" />
+    <Compile Include="Logic\ePieceType.cs" />
+    <Compile Include="Logic\ePlayerSide.cs" />
+    <Compile Include="Logic\Move.cs" />
+    <Compile Include="Logic\Player.cs" />
+    <Compile Include="Logic\PlayerPiece.cs" />
+    <Compile Include="Logic\Position.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="Resources\blackkingpiece.png" />
+    <Content Include="Resources\blackpiece.png" />
+    <Content Include="Resources\whitekingpiece.png" />
+    <Content Include="Resources\whitepiece.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Ex02.ConsoleUtils">
+      <HintPath>C:\Users\talta\Dropbox\HIT\Ex02\Ex02.ConsoleUtils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+# Ignore build output
+bin/
+obj/
+out/
+
+# Ignore Visual Studio specific files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore system and temporary files
+Thumbs.db
+*.tmp
+*.bak
+
+# Ignore dependency folders
+packages/
+node_modules/
+
+# Ignore debugging files
+*.pdb
+*.ilk
+*.cache
+*.ncb
+*.sdf
+*.opendb
