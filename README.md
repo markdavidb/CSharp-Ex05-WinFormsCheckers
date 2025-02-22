@@ -1,4 +1,4 @@
-# 🏁 WinForms English Checkers
+# 🏁 WinForms English Checkers - Ex05
 
 A Windows-based English Checkers game developed in **C# using WinForms**.  
 This project includes **player setup, turn-based gameplay, and rule enforcement**.
