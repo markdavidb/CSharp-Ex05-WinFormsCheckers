@@ -200,32 +200,25 @@ namespace CheckersWinApp.Logic
         {
             o_ChosenMove = null;
             o_ErrorMsg = string.Empty;
-
-            // שלב 1: בדיקה אם יש למחשב מהלכים
             List<Move> possibleMoves = getAllPossibleMovesForPlayer(m_CurrentPlayer);
+            
             if (possibleMoves.Count == 0)
             {
-                // אם אין מהלכים זמינים, חוזרים false
                 o_ErrorMsg = "No available moves for the computer.";
                 return false;
             }
 
-            // שלב 2: בחירת מהלך אקראי
             int index = r_RandForComputer.Next(possibleMoves.Count);
             Move chosenMove = possibleMoves[index];
-
-            // שלב 3: ביצוע המהלך
             bool moveSucceeded = MakeMove(chosenMove, out string errorMsg);
+            
             if (!moveSucceeded)
             {
-                // אם המהלך נכשל מסיבה כלשהי
                 o_ErrorMsg = errorMsg;
                 return false;
             }
 
-            // שלב 4: אם הצלחנו לבצע מהלך, נעדכן את הערך ב־out
             o_ChosenMove = chosenMove;
-            // אין הודעת שגיאה
             o_ErrorMsg = string.Empty;
 
             return true;
